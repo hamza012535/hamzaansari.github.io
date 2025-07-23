@@ -1,0 +1,35 @@
+// Dark theme styles
+[data-theme="dark"] {
+  // Neo Brutalist Dark Theme
+  --bg-primary: #{map-get($neo-brutalist-dark, 'bg-primary')};
+  --bg-secondary: #{map-get($neo-brutalist-dark, 'bg-secondary')};
+  --text-primary: #{map-get($neo-brutalist-dark, 'text-primary')};
+  --text-secondary: #{map-get($neo-brutalist-dark, 'text-secondary')};
+  --accent: #{map-get($neo-brutalist-dark, 'accent')};
+  --accent-hover: #{map-get($neo-brutalist-dark, 'accent-hover')};
+  
+  // Dark theme specific shadows
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.6);
+  
+  // Glass morphism for dark theme
+  --glass-bg: rgba(26, 26, 26, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+// Futuristic Glass Dark Theme variant
+[data-theme="dark"][data-variant="glass"] {
+  --bg-primary: #{map-get($futuristic-glass-dark, 'bg-primary')};
+  --bg-secondary: #{map-get($futuristic-glass-dark, 'bg-secondary')};
+  --text-primary: #{map-get($futuristic-glass-dark, 'text-primary')};
+  --text-secondary: #{map-get($futuristic-glass-dark, 'text-secondary')};
+  --accent: #{map-get($futuristic-glass-dark, 'accent')};
+  --accent-hover: #{map-get($futuristic-glass-dark, 'accent-hover')};
+  
+  // Glass theme specific effects
+  --glass-bg: rgba(15, 32, 39, 0.8);
+  --glass-border: rgba(0, 212, 255, 0.2);
+}
+

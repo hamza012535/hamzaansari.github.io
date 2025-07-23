@@ -1,0 +1,98 @@
+// Font imports
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+// Root variables for theming
+:root {
+  // Typography
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  // Font sizes (responsive)
+  --fs-hero: clamp(3rem, 8vw, 8rem);
+  --fs-h1: clamp(2.5rem, 6vw, 4rem);
+  --fs-h2: clamp(2rem, 4vw, 3rem);
+  --fs-h3: clamp(1.5rem, 3vw, 2rem);
+  --fs-body: clamp(1rem, 2vw, 1.125rem);
+  --fs-small: clamp(0.875rem, 1.5vw, 1rem);
+  
+  // Spacing
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  
+  // Layout
+  --container-max: 1200px;
+  --container-padding: 2rem;
+  
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.8s ease;
+  
+  // Border radius
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 32px;
+  
+  // Z-index layers
+  --z-preloader: 9999;
+  --z-theme-toggle: 1000;
+  --z-modal: 999;
+  --z-cursor: 998;
+  --z-header: 100;
+  
+  // Animation timing
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+// Breakpoints
+$breakpoints: (
+  'xs': 480px,
+  'sm': 768px,
+  'md': 1024px,
+  'lg': 1200px,
+  'xl': 1400px
+);
+
+// Theme color schemes
+$neo-brutalist-light: (
+  'bg-primary': #fffbe6,
+  'bg-secondary': #f5f5dc,
+  'text-primary': #0e0e0e,
+  'text-secondary': #333333,
+  'accent': #ff6b35,
+  'accent-hover': #e55a2b
+);
+
+$neo-brutalist-dark: (
+  'bg-primary': #0e0e0e,
+  'bg-secondary': #1a1a1a,
+  'text-primary': #fffbe6,
+  'text-secondary': #cccccc,
+  'accent': #ff6b35,
+  'accent-hover': #ff7a47
+);
+
+$futuristic-glass-light: (
+  'bg-primary': #e0f7ff,
+  'bg-secondary': rgba(255, 255, 255, 0.8),
+  'text-primary': #0f2027,
+  'text-secondary': #2c5f2d,
+  'accent': #00d4ff,
+  'accent-hover': #00b8e6
+);
+
+$futuristic-glass-dark: (
+  'bg-primary': #0f2027,
+  'bg-secondary': rgba(15, 32, 39, 0.8),
+  'text-primary': #e0f7ff,
+  'text-secondary': #97c1a9,
+  'accent': #00d4ff,
+  'accent-hover': #1ae1ff
+);
+

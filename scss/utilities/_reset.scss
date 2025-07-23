@@ -1,0 +1,192 @@
+// Modern CSS reset with performance optimizations
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  
+  // Respect user's motion preferences
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+  
+  // Improve text rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  // Prevent iOS zoom on input focus
+  @media screen and (max-width: 768px) {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+// Remove default list styles
+ul,
+ol {
+  list-style: none;
+}
+
+// Remove default link styles
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Improve media defaults
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Form element improvements
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+// Remove default button styles
+button {
+  @include button-reset;
+}
+
+// Improve table defaults
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Focus styles for accessibility
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// Selection styles
+::selection {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+::-moz-selection {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+// Hide scrollbar while maintaining functionality
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+// Accessibility improvements
+.keyboard-navigation *:focus {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 2px !important;
+}
+
+// Print styles
+@media print {
+  .print-mode *,
+  .print-mode *::before,
+  .print-mode *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .theme-toggle,
+  .cursor-particles,
+  .hero-parallax,
+  .scroll-indicator {
+    display: none !important;
+  }
+}
+
+// No-JS fallbacks
+.no-js-animations *,
+.no-js-animations *::before,
+.no-js-animations *::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+// Loading states
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loaded {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.error {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+// Performance optimizations
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+// GPU acceleration for animations
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+// Scroll progress indicator
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 100%);
+  z-index: 1001;
+  transition: width 0.1s ease;
+}
+

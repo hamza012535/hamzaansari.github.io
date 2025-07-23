@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a Creative Developer & UI/UX Technologist specializing in modern web technologies and immersive user experiences.">
+    <meta name="keywords" content="web developer, UI/UX designer, frontend developer, creative developer, portfolio">
+    <meta name="author" content="Creative Developer">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-example.com/">
+    <meta property="og:title" content="Creative Developer & UI/UX Technologist">
+    <meta property="og:description" content="Portfolio showcasing modern web development and creative design solutions.">
+    <meta property="og:image" content="assets/images/avatar.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://portfolio-example.com/">
+    <meta property="twitter:title" content="Creative Developer & UI/UX Technologist">
+    <meta property="twitter:description" content="Portfolio showcasing modern web development and creative design solutions.">
+    <meta property="twitter:image" content="assets/images/avatar.jpg">
+    
+    <title>Creative Developer & UI/UX Technologist | Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" as="script">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="sr-only">Skip to main content</a>
+    
+    <!-- Preloader -->
+    <div id="preloader" class="preloader" aria-hidden="true">
+        <div class="preloader-text">Loading Portfolio...</div>
+        <div class="progress-bar" role="progressbar" aria-label="Loading progress"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark theme">
+        <span class="icon-light" aria-hidden="true">☀️</span>
+        <span class="icon-dark" aria-hidden="true">🌙</span>
+    </button>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading" class="hero-headline">Creative Developer & UI/UX Technologist</h1>
+            <div class="cursor-particles" aria-hidden="true"></div>
+            <div class="hero-parallax" aria-hidden="true">
+                <div class="parallax-layer"></div>
+                <div class="parallax-layer"></div>
+                <div class="parallax-layer"></div>
+            </div>
+            <button class="scroll-indicator" aria-label="Scroll to about section">
+                <span>Scroll Down</span>
+                <div class="arrow" aria-hidden="true"></div>
+            </button>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" aria-labelledby="about-heading">
+            <div class="about-left">
+                <img src="assets/images/avatar.jpg" alt="Professional headshot of Creative Developer" class="avatar" loading="lazy">
+            </div>
+            <div class="about-right">
+                <h2 id="about-heading" class="sr-only">About Me</h2>
+                <p class="about-text">
+                    I'm a passionate creative developer and UI/UX technologist with over 5 years of experience crafting immersive digital experiences. I specialize in modern web technologies, performance optimization, and creating user-centered designs that bridge the gap between aesthetics and functionality.
+                </p>
+                <p class="about-text">
+                    My expertise spans across frontend development, motion design, and user experience research. I believe in the power of clean code, thoughtful design, and continuous learning to create digital solutions that make a meaningful impact.
+                </p>
+                <div class="skills-list" role="list" aria-label="Technical skills">
+                    <span class="skill-tag" role="listitem">JavaScript</span>
+                    <span class="skill-tag" role="listitem">React</span>
+                    <span class="skill-tag" role="listitem">GSAP</span>
+                    <span class="skill-tag" role="listitem">UI/UX Design</span>
+                    <span class="skill-tag" role="listitem">WebGL</span>
+                    <span class="skill-tag" role="listitem">Node.js</span>
+                    <span class="skill-tag" role="listitem">Three.js</span>
+                    <span class="skill-tag" role="listitem">Figma</span>
+                </div>
+                <div class="cta-button">
+                    <a href="#contact" class="btn">
+                        Get In Touch
+                        <span class="icon" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Featured Projects</h2>
+            <div class="project-grid" role="list">
+                <!-- Project Item 1 -->
+                <article class="project-item" role="listitem" tabindex="0" aria-label="E-Commerce Platform project">
+                    <img src="assets/images/project1.jpg" alt="E-Commerce Platform interface showing modern design" loading="lazy">
+                    <div class="project-overlay">
+                        <h3>E-Commerce Platform</h3>
+                        <p class="project-description">Modern e-commerce solution with React, Node.js, and real-time features</p>
+                        <button class="view-project">View Project</button>
+                    </div>
+                </article>
+                
+                <!-- Project Item 2 -->
+                <article class="project-item" role="listitem" tabindex="0" aria-label="Portfolio Website project">
+                    <img src="assets/images/project2.jpg" alt="Creative portfolio website with animations" loading="lazy">
+                    <div class="project-overlay">
+                        <h3>Portfolio Website</h3>
+                        <p class="project-description">Creative portfolio with GSAP animations and WebGL effects</p>
+                        <button class="view-project">View Project</button>
+                    </div>
+                </article>
+                
+                <!-- Project Item 3 -->
+                <article class="project-item" role="listitem" tabindex="0" aria-label="Task Management App project">
+                    <img src="assets/images/project3.jpg" alt="Task management application interface" loading="lazy">
+                    <div class="project-overlay">
+                        <h3>Task Management App</h3>
+                        <p class="project-description">Collaborative task management with real-time updates and team features</p>
+                        <button class="view-project">View Project</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in Touch</h2>
+            <form class="contact-form" novalidate aria-label="Contact form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required aria-describedby="name-error" autocomplete="name">
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required aria-describedby="email-error" autocomplete="email">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+            <div class="contact-info" aria-label="Contact information">
+                <div class="contact-item">
+                    <div class="icon" aria-hidden="true">📧</div>
+                    <div class="label">Email</div>
+                    <div class="value">hello@example.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon" aria-hidden="true">📱</div>
+                    <div class="label">Phone</div>
+                    <div class="value">+1 (555) 123-4567</div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon" aria-hidden="true">📍</div>
+                    <div class="label">Location</div>
+                    <div class="value">San Francisco, CA</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+</body>
+</html>
+
+

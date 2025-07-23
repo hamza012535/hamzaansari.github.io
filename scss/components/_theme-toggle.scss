@@ -1,0 +1,101 @@
+// Theme toggle component styles
+.theme-toggle {
+  position: fixed;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--accent);
+  @include flex-center;
+  cursor: pointer;
+  z-index: var(--z-theme-toggle);
+  @include smooth-transition(all, var(--transition-medium));
+  box-shadow: var(--shadow-md);
+  
+  // Hover effects
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+  
+  // Icon styles
+  .icon-light,
+  .icon-dark {
+    font-size: 24px;
+    position: absolute;
+    @include smooth-transition(all, var(--transition-medium));
+  }
+  
+  .icon-light {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  
+  .icon-dark {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.5);
+  }
+  
+  // Mobile adjustments
+  @media (max-width: 768px) {
+    top: var(--space-sm);
+    right: var(--space-sm);
+    width: 50px;
+    height: 50px;
+    
+    .icon-light,
+    .icon-dark {
+      font-size: 20px;
+    }
+  }
+}
+
+// Dark theme icon states
+[data-theme="dark"] .theme-toggle {
+  .icon-light {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  
+  .icon-dark {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+// Glass morphism variant
+[data-variant="glass"] .theme-toggle {
+  @include glass-morphism(0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+// Focus styles for accessibility
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+    
+    &:hover {
+      transform: none;
+    }
+    
+    .icon-light,
+    .icon-dark {
+      transition: opacity var(--transition-fast);
+      transform: none !important;
+    }
+  }
+}
+

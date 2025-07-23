@@ -1,0 +1,20 @@
+// Import utilities first
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/reset';
+
+// Import themes
+@import 'themes/light';
+@import 'themes/dark';
+
+// Import layout components
+@import 'layouts/base';
+
+// Import components
+@import 'components/preloader';
+@import 'components/theme-toggle';
+@import 'components/hero';
+@import 'components/about';
+@import 'components/projects';
+@import 'components/contact';
+
