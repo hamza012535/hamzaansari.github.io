@@ -274,11 +274,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Contact
 
 For questions or support, please contact:
-- Email: hello@example.com
-- Phone: +1 (555) 123-4567
+- Email: hamzaansari@gmail.com
+- Phone: +923130890746
 - Location: San Francisco, CA
 
 ---
-
-**Built with ❤️ using modern web technologies**
 
